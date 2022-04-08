@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<title>Person List</title>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Firstname</th>
+					<th>Lastname</th>
+					<th>Age</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="person : ${personlist}">
+					<td><span th:text="${person.firstname}"></span></td>
+					<td><span th:text="${person.lastname}"></span></td>
+					<td><span th:text="${person.age}"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
